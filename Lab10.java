@@ -88,7 +88,7 @@ public static void Q3() {
     int counter = 0;
     boolean check = false;
     for (int i = n; i > 2; i--) {
-        for (int j = 2; j < i; j++) {
+        for (int j = 2; j < n; j++) {
             if(n%j == 0){
                 check = true;
             }
