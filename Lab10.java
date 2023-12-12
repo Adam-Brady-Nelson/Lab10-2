@@ -79,6 +79,7 @@ public class Lab10 {
             return;
         }
         System.out.println("You selected " + temp + " of " + months[num2-1]);
+
     }
 
 public static void Q3() {
@@ -104,7 +105,7 @@ public static void Q3() {
         else {}
     }
 
-        System.out.println("There are: " + counter + " primes between 0 and " + n);
+    System.out.println("There are: " + counter + " primes between 0 and " + n);
     }
 
     public static void Q4() {
