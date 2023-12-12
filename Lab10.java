@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//Comment for Computer Science Centre
 public class Lab10 {
     static Scanner scan = new Scanner(System.in);
 
