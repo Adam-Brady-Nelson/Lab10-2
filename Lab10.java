@@ -19,28 +19,31 @@ public class Lab10 {
             if (input.equals("q")) {
                 return;
             }
+            double a, b, r;
+            switch(input) {
+                case "square" :
+                    System.out.println("Enter the length of side a: ");
+                    a = Double.parseDouble(scan.nextLine());
+                    System.out.println("The perimeter of the square is: " + a * 4);
+                    System.out.println("The area of the square is: " + a * a);
+                    break;
 
-            if (input.equals("square")) {
-                double a;
-                System.out.println("Enter the length of side a: ");
-                a = Double.parseDouble(scan.nextLine());
-                System.out.println("The circumference of the square is: " + a * 4);
-                System.out.println("The area of the square is: " + a * a);
-
-            } else if (input.equals("rectangle")) {
-                double a, b;
-                System.out.println("Enter the length of side a: ");
-                a = Double.parseDouble(scan.nextLine());
-                System.out.println("Enter the length of side b: ");
-                b = Double.parseDouble(scan.nextLine());
-                System.out.println("The circumference of the rectangle is: " + (2 * a + 2 * b));
-                System.out.println("The area of the rectangle is: " + (a * b));
-            } else if (input.equals("circle")) {
-                double r;
-                System.out.println("Enter the radius: ");
-                r = Double.parseDouble(scan.nextLine());
-                System.out.println("The circumference of the circle is: " + (Math.PI * r * 2));
-                System.out.println("The area of the circle is: " + (Math.PI * r * r));
+                case "rectangle" :
+                    System.out.println("Enter the length of side a: ");
+                    a = Double.parseDouble(scan.nextLine());
+                    System.out.println("Enter the length of side b: ");
+                    b = Double.parseDouble(scan.nextLine());
+                    System.out.println("The perimeter of the rectangle is: " + (2 * a + 2 * b));
+                    System.out.println("The area of the rectangle is: " + (a * b));
+                    break;
+                case "circle" :
+                    System.out.println("Enter the radius: ");
+                    r = Double.parseDouble(scan.nextLine());
+                    System.out.println("The circumference of the circle is: " + (Math.PI * r * 2));
+                    System.out.println("The area of the circle is: " + (Math.PI * r * r));
+                    break;
+                default:
+                    break;
             }
         }
     }
