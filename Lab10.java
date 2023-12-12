@@ -191,11 +191,11 @@ public static void Q3() {
             while (!check2) {
                 next = scan.nextLine();
                 check2 = true;
-                switch (next) {
-                    case "A", "a":
+                switch (next.toUpperCase()) {
+                    case "A":
                         doAttack = true;
                         break;
-                    case "B", "b":
+                    case "B":
                         check = true;
                         System.out.println("Buffing! +5 to your next attack roll and damage");
                         break;
