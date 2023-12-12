@@ -65,14 +65,20 @@ public class Lab10 {
                 temp = temp + num + "th";
             }
         }else{
-            System.out.println("Invalid month");
+            System.out.println("Invalid Day");
+            return;
             //break;
         }
         //System.out.println()
         System.out.println("Enter the current month: (1-12)");
         int num2 = Integer.parseInt(scan.nextLine());
         String[] months = {"January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        System.out.println("You selected " + temp + " of " + months[num2]);
+        if(num2<0 || num > 12)
+        {
+            System.out.println("Invalid month");
+            return;
+        }
+        System.out.println("You selected " + temp + " of " + months[num2-1]);
         // if (num == 1)
         //     System.out.print("You selected 1st of ");
         // else if (num == 2)
