@@ -52,21 +52,27 @@ public class Lab10 {
         System.out.println("Q2: Enter the current day (1-31): ");
         String temp = "";
         int num = Integer.parseInt(scan.nextLine());
-        if(num%10 == 1)
+        if(num>1 && num <31)
         {
-            temp = temp + num + "st";
-        }else if(num%10 == 2){
-            temp = temp + num + "nd";
-        }else if(num%10 == 3){
-            temp = temp + num + "rd";
+            if(num%10 == 1)
+            {
+                temp = temp + num + "st";
+            }else if(num%10 == 2){
+                temp = temp + num + "nd";
+            }else if(num%10 == 3){
+                temp = temp + num + "rd";
+            }else{
+                temp = temp + num + "th";
+            }
         }else{
-            temp = temp + num + "th";
+            System.out.println("Invalid month");
+            //break;
         }
-        System.out.println()
+        //System.out.println()
         System.out.println("Enter the current month: (1-12)");
         int num2 = Integer.parseInt(scan.nextLine());
         String[] months = {"January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-
+        System.out.println("You selected " + temp + " of " + months[num2]);
         // if (num == 1)
         //     System.out.print("You selected 1st of ");
         // else if (num == 2)
