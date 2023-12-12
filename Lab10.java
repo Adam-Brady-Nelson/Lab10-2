@@ -87,15 +87,20 @@ public static void Q3() {
     int n = Integer.parseInt(scan.nextLine());
     int counter = 0;
     boolean check = false;
-    for (int i = n; i > 2; i--) {
-        for (int j = 2; j < n; j++) {
-            if(n%j == 0){
-                check = true;
+    
+    for (int i = 0; i< n; i++) {
+        if(i < 2){continue;}
+        check = true;
+        for (int j = 2; j*j <= i; j++) {
+            if(i%j == 0){
+                check = false;
+                break;
             }
             if(check == true){
                 counter++;
             }
         }
+        //check = false;
         
         // if (i < 2){
         //     //continue;
@@ -112,7 +117,7 @@ public static void Q3() {
         //     }   
         // }
     }
-    counter+=2;
+    counter+=1;
     System.out.println("There are: " + counter + " primes between 0 and " + n);
 }
 
